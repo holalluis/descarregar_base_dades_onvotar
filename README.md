@@ -11,8 +11,8 @@ nom carpeta | status
 <li>00 | descarregada
 <li>01 | descarregada
 <li>02 | descarregada
-<li>03 | en procés
-<li>04 |
+<li>03 | descarregada
+<li>04 | en procés
 <li>05 |
 <li>06 |
 <li>07 |
@@ -263,4 +263,4 @@ nom carpeta | status
 <li>fc |
 <li>fd |
 <li>fe | 
-<li>ff | 
+<li>ff | Alan descarregant

@@ -2,6 +2,7 @@
 
 read -p "Escriu nom carpeta i prem Enter: " carpeta
 
+#crea carpeta
 mkdir $carpeta
 
 #totes les xifres en hexadecimal
@@ -27,5 +28,5 @@ xifres=( \
 #bucles
 for arxiu in "${xifres[@]}"
 do
-	curl -s https://onvotar.garantiespelreferendum.com/db/$carpeta/$arxiu.db > $carpeta/$arxiu.db
+	curl https://onvotar.garantiespelreferendum.com/db/$carpeta/$arxiu.db > $carpeta/$arxiu.db
 done
