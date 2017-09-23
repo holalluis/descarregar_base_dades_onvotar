@@ -1,7 +1,5 @@
 #!/bin/bash
-#elimina errors
-
-cd db
+#descarrega la base de dades encriptada de la web onvotar.garantiespelreferendum.com
 
 #totes les xifres en hexadecimal
 xifres=( \
@@ -24,8 +22,7 @@ xifres=( \
 )
 
 #bucles
-for carpeta in "${xifres[@]}"
+for xifra in "${xifres[@]}"
 do
-	echo "carpeta $carpeta"
-	rm $(file $carpeta/* | grep "HTML document text" | cut -d\: -f1)
+	bash descarrega_carpeta.sh $xifra & #256 processos en paralel
 done

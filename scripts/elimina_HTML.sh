@@ -1,5 +1,7 @@
 #!/bin/bash
-#descarrega la base de dades encriptada de la web onvotar.garantiespelreferendum.com
+#elimina arxius html generats quan el certificat caduca, son arxius d'uns 6kb que s'han d'eliminar
+
+cd db
 
 #totes les xifres en hexadecimal
 xifres=( \
@@ -22,7 +24,8 @@ xifres=( \
 )
 
 #bucles
-for xifra in "${xifres[@]}"
+for carpeta in "${xifres[@]}"
 do
-	bash descarrega_carpeta.sh $xifra
+	echo "carpeta $carpeta"
+	rm $(file $carpeta/* | grep "HTML document text" | cut -d\: -f1)
 done
